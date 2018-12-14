@@ -1,0 +1,333 @@
+/* Variables */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.animation1 {
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
+
+.animation2 {
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
+
+.animation3 {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
+
+/*
+** BASE
+*/
+html {
+  font-size: 62.5%; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  box-sizing: border-box;
+  background-color: #fff; }
+
+.test {
+  width: 100%;
+  height: 500px; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  /*font-size: 16px;*/ }
+
+a:link,
+a:visited,
+a:active {
+  color: #282828;
+  text-decoration: none; }
+
+a:hover {
+  border-bottom: 1px solid #282828; }
+
+h1 {
+  font-size: 4rem;
+  line-height: 10rem;
+  font-weight: 500; }
+
+.thin-text {
+  font-weight: 200; }
+
+h2:after {
+  content: "";
+  display: block;
+  margin: 1rem auto 10rem;
+  width: 10rem;
+  border-bottom: 1px solid #0497b1; }
+
+.section-heading {
+  font-size: 4rem;
+  color: #fff; }
+  .section-heading--sub {
+    color: #131040;
+    font-size: 2rem; }
+
+.section-heading-dark {
+  font-size: 4rem;
+  color: #000; }
+  .section-heading-dark--sub {
+    color: #131040;
+    font-size: 2rem; }
+
+.section-heading-img {
+  font-size: 4rem;
+  color: #fff; }
+  .section-heading-img--sub {
+    color: #fff;
+    font-size: 2rem; }
+
+.section-p {
+  font-size: 1.4rem;
+  line-height: 2rem; }
+
+.section-p-2 {
+  color: #282828;
+  font-size: 1.4rem;
+  line-height: 2.5rem; }
+
+/*
+** UTILITES
+*/
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-bottom: 10rem !important; }
+
+.wrapper {
+  min-height: 1rem; }
+
+.contactme {
+  padding: 5rem 0 10rem;
+  background-color: #fff;
+  position: relative; }
+  .contactme p {
+    margin: 0 auto;
+    width: 20rem;
+    padding: 3rem;
+    border: 1px solid #0497b1;
+    transition: all .5s;
+    font-size: 2rem; }
+    .contactme p:hover {
+      background-color: #0497b1;
+      color: #fff;
+      transition: all .5s; }
+
+.graphicdesign {
+  padding: 10rem 0 20rem;
+  background-image: linear-gradient(to right bottom, rgba(19, 16, 64, 0.95), rgba(4, 151, 177, 0.8)), url(../img/oli-dale-139169-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.photography {
+  padding: 10rem 0 20rem;
+  background-image: linear-gradient(to right bottom, rgba(19, 16, 64, 0.8), rgba(4, 151, 177, 0.8)), url(../img/william-bayreuther-586504-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.images {
+  position: relative; }
+  .images__hidden {
+    display: none; }
+  .images__image {
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1;
+    transition: all .2s;
+    /*&:hover {
+      border: 3px solid $color-primary-light;
+      transform: scale(1.05) translateY(-.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+      z-index: 2;
+    }*/ }
+    .images__image--img1 {
+      height: 30rem;
+      right: 15rem;
+      top: -2.5rem;
+      z-index: 2; }
+    .images__image--img2 {
+      height: 35rem;
+      right: 0;
+      top: -5rem; }
+    .images__image--img3 {
+      height: 30rem;
+      left: 15rem;
+      top: -2.5rem;
+      z-index: 2; }
+    .images__image--img4 {
+      height: 35rem;
+      left: 0;
+      top: -5rem; }
+
+.webdev {
+  margin: -10rem 0;
+  padding: 10rem 0 20rem;
+  background-image: linear-gradient(to right bottom, rgba(4, 151, 177, 0.8), rgba(19, 16, 64, 0.8)), url(../img/christopher-gower-291246-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 90%, 0% 10%);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 90%, 0% 10%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.whatido {
+  padding: 5rem 0 10rem; }
+  .whatido .item-box {
+    width: 100%;
+    text-align: center; }
+    .whatido .item-box__photo-icon {
+      width: 10rem;
+      height: 10rem;
+      fill: #0497b1;
+      margin-bottom: 3rem; }
+
+.footer {
+  padding: 5rem 0;
+  background-color: #222222; }
+  .footer span {
+    color: #0497b1; }
+
+/*
+** GRID Medium
+*/
+.row-full {
+  max-width: 100%;
+  margin: 0 auto; }
+  .row-full:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row-full::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row-full [class^="col-"] {
+    float: left; }
+    .row-full [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row-full .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+
+/*
+** GRID Medium
+*/
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  position: relative;
+  height: 90vh;
+  background-image: linear-gradient(to right bottom, rgba(19, 16, 64, 0.9), rgba(4, 151, 177, 0.9)), url(../img/jeshoots-com-219059-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 100% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  z-index: 99; }
+  .header__text-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: right;
+    transform: translate(-50%, -50%); }
+  .header__logo-large {
+    height: 15rem;
+    display: block;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .header__logo-medium {
+    height: 6rem;
+    padding-left: 2rem; }
+  .header__scroll-link {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center; }
+    .header__scroll-link--icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: #fff;
+      margin-bottom: 3rem; }
+      .header__scroll-link--icon .white {
+        fill: #fff;
+        opacity: .5;
+        transition: all .5s; }
+        .header__scroll-link--icon .white:hover {
+          opacity: 1;
+          transition: all .5s; }
